@@ -1,0 +1,25 @@
+
+.h2-title {
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(211,240,255,1) 0%, rgba(255,255,255,0) 60%);
+  border-radius: 8px;
+
+}
+
+
+:host-context(#dark){
+  h1{
+
+    background: rgba(126, 126, 126, 1.0);
+    background: linear-gradient(90deg, rgb(37, 37, 44) 0%, rgb(105, 105, 105) 0%, rgba(255,255,255,0) 60%);
+  }
+  .h3 {
+    background: rgba(126, 126, 126, 1.0)!important;
+    background: linear-gradient(90deg, rgb(37, 37, 44) 0%, rgb(105, 105, 105) 0%, rgba(255,255,255,0) 60%)!important;
+  }
+}
+@media screen and (max-width: 900px) {
+  .homeList {
+    font-size: 14px;
+  }
+}

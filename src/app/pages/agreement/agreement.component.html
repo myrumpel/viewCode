@@ -1,0 +1,11 @@
+<!--<app-h1></app-h1>-->
+<app-headline [grade]="1">{{ data.title }}</app-headline>
+
+<app-headline [grade]="4">{{ data.subtitle_1 }}</app-headline>
+
+@for (item of data.text_1; track item) {
+  <app-paragraph>{{ item }}</app-paragraph>
+}
+<app-headline [grade]="4">{{ data.subtitle_2 }}</app-headline>
+
+<app-paragraph>{{ data.text_2 }}</app-paragraph>

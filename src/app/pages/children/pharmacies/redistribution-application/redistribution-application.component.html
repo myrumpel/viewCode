@@ -1,0 +1,70 @@
+<div class="content">
+  <app-headline [grade]="2">{{ data.title }}</app-headline>
+
+  <app-info-section>
+    <app-paragraph>{{ data.content.element_1.text }}</app-paragraph>
+  </app-info-section>
+  <app-info-section>
+    <app-headline [grade]="2">{{ data.content.element_2.title }}</app-headline>
+
+    <app-paragraph>{{ data.content.element_2.text }}</app-paragraph>
+  </app-info-section>
+  <app-info-section>
+    <app-headline [grade]="2">{{ data.content.element_3.title }}</app-headline>
+
+    <app-paragraph>
+      <ul>
+        <li *ngFor="let item of data.content.element_3.text">{{ item }}</li>
+      </ul>
+    </app-paragraph>
+  </app-info-section>
+  <app-info-section>
+    <app-headline [grade]="2">{{ data.content.element_4.title }}</app-headline>
+
+    <app-paragraph>{{ data.content.element_4.text }}</app-paragraph>
+  </app-info-section>
+
+  <app-info-section>
+    <app-headline [grade]="2">{{ data.content.element_5.title }}</app-headline>
+
+    <app-paragraph>{{ data.content.element_5.content.text_1 }}</app-paragraph>
+    <app-paragraph>
+      <ul>
+        <li *ngFor="let item of data.content.element_5.content.text_2">
+          {{ item }}
+        </li>
+      </ul>
+    </app-paragraph>
+    <app-paragraph>{{ data.content.element_5.content.text_3 }}</app-paragraph>
+    <app-paragraph>
+      <ul>
+        <li *ngFor="let item of data.content.element_5.content.text_4">
+          {{ item }}
+        </li>
+      </ul>
+    </app-paragraph>
+    <app-paragraph>{{ data.content.element_5.content.text_5 }}</app-paragraph>
+    <app-paragraph>{{ data.content.element_5.content.text_6 }}</app-paragraph>
+    <app-paragraph>
+      <ul>
+        <li *ngFor="let item of data.content.element_5.content.text_7">
+          {{ item }}
+        </li>
+      </ul>
+    </app-paragraph>
+    <app-info-section>
+      <app-headline [grade]="2">{{ data.content.element_6.title }}</app-headline>
+
+      <app-paragraph>{{ data.content.element_6.text }}</app-paragraph>
+    </app-info-section>
+    <app-info-section>
+      <app-headline [grade]="2">{{ data.content.element_7.title }}</app-headline>
+
+      <app-paragraph>
+        <ul>
+          <li *ngFor="let item of data.content.element_7.text">{{ item }}</li>
+        </ul>
+      </app-paragraph>
+    </app-info-section>
+  </app-info-section>
+</div>

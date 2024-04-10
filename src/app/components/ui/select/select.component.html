@@ -1,0 +1,26 @@
+<div class="select_wrapper" [@scrollSelect]="scrollService.initState | async">
+  <button
+    class="select_button"
+    [ngClass]="{ select_button_active: selectIsActive }"
+    (click)="toggleSelect()"
+  >
+    <p class="text-indicator">{{ selectText }}</p>
+    <mat-icon
+      color="#70809063"
+      class="expand_more"
+      [ngClass]="{ expand_more_active: selectIsActive }"
+      >expand_more</mat-icon
+    >
+  </button>
+  <ul class="select_list" [ngClass]="{ select_list_active: selectIsActive }">
+    <li
+      class="select_list_element"
+      *ngFor="let item of linksArray"
+      (click)="itemClick($event)"
+    >
+      <a routerLink="{{ item.link }}" routerLinkActive="linkActive">{{
+        item.text
+      }}</a>
+    </li>
+  </ul>
+</div>

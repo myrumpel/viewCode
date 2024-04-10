@@ -1,0 +1,228 @@
+<div class="content">
+  <app-headline [grade]="2">{{ data.title }}</app-headline>
+
+  <app-info-section>
+    <app-headline [grade]="4">{{ data.subtitle }}</app-headline>
+
+    <app-paragraph *ngFor="let item of data.content.element_1.text">
+      {{ item }}
+    </app-paragraph></app-info-section
+  >
+  <app-info-section>
+    <app-headline [grade]="5">{{ data.content.element_2.title }}</app-headline>
+
+    <app-paragraph *ngFor="let item of data.content.element_2.text">{{ item }}</app-paragraph>
+  </app-info-section>
+  <app-info-section>
+    <app-headline [grade]="5">{{ data.content.element_3.title }}</app-headline>
+
+    <app-paragraph>
+      <ul>
+        <li *ngFor="let item of data.content.element_3.textList">{{ item }}</li>
+      </ul>
+    </app-paragraph>
+  </app-info-section>
+  <app-info-section>
+    <app-headline [grade]="5">{{ data.content.element_4.title }}</app-headline>
+
+    <app-paragraph>
+      <ul>
+        <li *ngFor="let item of data.content.element_4.textList">{{ item }}</li>
+      </ul>
+    </app-paragraph>
+  </app-info-section>
+  <app-info-section>
+    <app-headline [grade]="5">{{ data.content.element_5.title }}</app-headline>
+
+    <app-paragraph>
+      <ul>
+        <li *ngFor="let item of data.content.element_5.textList">{{ item }}</li>
+      </ul>
+    </app-paragraph>
+  </app-info-section>
+  <app-info-section>
+    <app-headline [grade]="5">{{ data.content.element_6.title }}</app-headline>
+
+    <app-paragraph>{{ data.content.element_6.text }}</app-paragraph>
+  </app-info-section>
+  <app-info-section>
+    <app-headline [grade]="5">{{ data.content.element_7.title }}</app-headline>
+
+    <app-paragraph *ngFor="let item of data.content.element_7.content.text_1">{{
+      item
+    }}</app-paragraph>
+    <img src="{{ data.content.element_7.images.img_1 }}" alt="{{ data.content.element_7.title }}" />
+    <app-paragraph>{{ data.content.element_7.content.text_2 }}</app-paragraph>
+    <img src="{{ data.content.element_7.images.img_2 }}" alt="{{ data.content.element_7.title }}" />
+  </app-info-section>
+  <app-info-section>
+    <5>
+    <app-headline [grade]="5">{{ data.content.element_7.content.</app-headline>
+
+    <app-paragraph>
+      <ul>
+        <li *ngFor="let item of data.content.element_7.content.textList_1">
+          {{ item }}
+        </li>
+      </ul>
+    </app-paragraph>
+    <img src="{{ data.content.element_7.images.img_3 }}" alt="{{ data.content.element_7.title }}" />
+  </app-info-section>
+  <app-info-section>
+    <app-headline [grade]="5">{{ data.content.element_8.title }}</app-headline>
+
+    <app-paragraph>{{ data.content.element_8.content.text_1 }}</app-paragraph>
+    <app-paragraph>
+      <ul class="list-decimal ml-[16px]">
+        <li *ngFor="let item of data.content.element_8.content.textList">
+          {{ item }}
+        </li>
+      </ul>
+    </app-paragraph>
+    <app-paragraph>{{ data.content.element_8.content.text_2 }}</app-paragraph>
+    <img src="{{ data.content.element_8.image }}" alt="{{ data.content.element_8.title }}" />
+    <app-paragraph *ngFor="let item of data.content.element_8.content.text_3">{{
+      item
+    }}</app-paragraph>
+  </app-info-section>
+  <app-info-section>
+    <app-headline [grade]="5">{{ data.content.element_9.title }}</app-headline>
+
+    <app-paragraph *ngFor="let item of data.content.element_9.text">{{ item }}</app-paragraph>
+    <img src="{{ data.content.element_9.image }}" alt="{{ data.content.element_9.title }}" />
+  </app-info-section>
+  <app-info-section>
+    <app-headline [grade]="5">{{ data.content.element_10.title }}</app-headline>
+
+    <app-paragraph>{{ data.content.element_10.text_1 }}</app-paragraph>
+    <img src="{{ data.content.element_10.image }}" alt="{{ data.content.element_10.title }}" />
+    <app-paragraph *ngFor="let item of data.content.element_10.text_2">{{ item }}</app-paragraph>
+  </app-info-section>
+  <app-info-section>
+    <app-headline [grade]="5">{{ data.content.element_11.title }}</app-headline>
+
+    <app-paragraph>{{ data.content.element_11.text }}</app-paragraph>
+    <img src="{{ data.content.element_11.image }}" alt="{{ data.content.element_11.title }}" />
+  </app-info-section>
+  <app-info-section>
+    <app-headline [grade]="5">{{ data.content.element_12.title }}</app-headline>
+
+    <app-paragraph>{{ data.content.element_12.content.text_1 }}</app-paragraph>
+    <app-paragraph>{{ data.content.element_12.content.text_2 }}</app-paragraph>
+    <app-paragraph>
+      <ul class="list-decimal ml-[16px]">
+        <li *ngFor="let item of data.content.element_12.content.textList">
+          {{ item }}
+        </li>
+      </ul>
+    </app-paragraph>
+    <app-paragraph>{{ data.content.element_12.content.text_3 }}</app-paragraph>
+    <img src="{{ data.content.element_12.image }}" alt="{{ data.content.element_12.title }}" />
+  </app-info-section>
+  <app-info-section>
+    <app-headline [grade]="5">{{ data.content.element_13.title }}</app-headline>
+
+    <app-paragraph>{{ data.content.element_13.text }}</app-paragraph>
+  </app-info-section>
+  <app-info-section>
+    <app-headline [grade]="5">{{ data.content.element_14.title }}</app-headline>
+
+    <app-paragraph>{{ data.content.element_14.text }}</app-paragraph>
+    <app-paragraph>
+      <ul>
+        <li *ngFor="let item of data.content.element_14.textList">
+          {{ item }}
+        </li>
+      </ul>
+    </app-paragraph>
+    <img src="{{ data.content.element_14.image }}" alt="{{ data.content.element_14.title }}" />
+  </app-info-section>
+  <app-info-section>
+    <app-headline [grade]="5">{{ data.content.element_15.title }}</app-headline>
+
+    <app-paragraph>{{ data.content.element_15.text }}</app-paragraph>
+    <img src="{{ data.content.element_15.image }}" alt="{{ data.content.element_15.title }}" />
+  </app-info-section>
+  <app-info-section>
+    <app-headline [grade]="5">{{ data.content.element_16.title }}</app-headline>
+
+    <app-paragraph>{{ data.content.element_16.text }}</app-paragraph>
+    <app-paragraph>
+      <ul class="list-decimal ml-[16px]">
+        <li *ngFor="let item of data.content.element_16.textList">
+          {{ item }}
+        </li>
+      </ul>
+    </app-paragraph>
+  </app-info-section>
+  <app-info-section>
+    <app-headline [grade]="5">{{ data.content.element_17.title }}</app-headline>
+
+    <app-paragraph>
+      <ul class="list-decimal ml-[16px]">
+        <li *ngFor="let item of data.content.element_17.textList_1">
+          {{ item }}
+        </li>
+      </ul>
+    </app-paragraph>
+    <img
+      src="{{ data.content.element_17.images.img_1 }}"
+      alt="{{ data.content.element_17.title }}"
+    />
+    <app-paragraph>{{ data.content.element_17.text_1 }}</app-paragraph>
+    <app-paragraph>
+      <ul class="list-decimal ml-[16px]">
+        <li *ngFor="let item of data.content.element_17.textList_2">
+          {{ item }}
+        </li>
+      </ul>
+    </app-paragraph>
+    <img
+      src="{{ data.content.element_17.images.img_2 }}"
+      alt="{{ data.content.element_17.title }}"
+    />
+  </app-info-section>
+  <app-info-section>
+    <app-headline [grade]="5">{{ data.content.element_18.title }}</app-headline>
+
+    <app-paragraph>{{ data.content.element_18.text_1 }}</app-paragraph>
+    <app-paragraph>
+      <ul class="list-decimal ml-[16px]">
+        <li *ngFor="let item of data.content.element_18.textList_1">
+          {{ item }}
+        </li>
+      </ul>
+    </app-paragraph>
+    <app-paragraph>{{ data.content.element_18.text_2 }}</app-paragraph>
+    <img
+      src="{{ data.content.element_18.images.img_1 }}"
+      alt="{{ data.content.element_18.title }}"
+    />
+    <app-paragraph>{{ data.content.element_18.text_3 }}</app-paragraph>
+    <app-paragraph>
+      <ul class="list-decimal ml-[16px]">
+        <li *ngFor="let item of data.content.element_18.textList_2">
+          {{ item }}
+        </li>
+      </ul>
+    </app-paragraph>
+    <app-paragraph>{{ data.content.element_18.text_4 }}</app-paragraph>
+    <img
+      src="{{ data.content.element_18.images.img_2 }}"
+      alt="{{ data.content.element_18.title }}"
+    />
+    <app-paragraph>{{ data.content.element_18.text_5 }}</app-paragraph>
+    <app-paragraph>
+      <ul class="list-decimal ml-[16px]">
+        <li *ngFor="let item of data.content.element_18.textList_3">
+          {{ item }}
+        </li>
+      </ul>
+    </app-paragraph>
+    <app-paragraph>{{ data.content.element_18.text_6 }}</app-paragraph>
+    <img
+      src="{{ data.content.element_18.images.img_3 }}"
+      alt="{{ data.content.element_18.title }}"
+    />
+  </app-info-section>
+</div>

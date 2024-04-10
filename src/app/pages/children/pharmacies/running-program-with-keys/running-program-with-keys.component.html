@@ -1,0 +1,24 @@
+<div class="content">
+  <app-headline [grade]="2">{{ data.title }}</app-headline>
+  <app-info-section
+    ><app-paragraph *ngFor="let item of data.content.text">{{ item }}</app-paragraph>
+  </app-info-section>
+  <app-info-section>
+    <app-headline [grade]="4">{{ data.content.element_1.title }}</app-headline>
+
+    <app-paragraph>
+      <ul>
+        <li *ngFor="let item of data.content.element_1.text">{{ item }}</li>
+      </ul>
+    </app-paragraph></app-info-section
+  >
+  <app-info-section>
+    <app-headline [grade]="4">{{ data.content.element_2.title }}</app-headline>
+
+    <app-paragraph>
+      <ul>
+        <li *ngFor="let item of data.content.element_2.text">{{ item }}</li>
+      </ul>
+    </app-paragraph></app-info-section
+  >
+</div>

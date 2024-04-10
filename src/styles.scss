@@ -1,0 +1,109 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+html{
+  overflow-y: scroll
+
+
+}
+
+  ::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+  ::-webkit-scrollbar-track {
+    background: rgba(119, 119, 119, 0.05);
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 0.815rem;
+    background-color: #919191;
+  }
+html, body {
+  height: 100%;
+  box-sizing: border-box;
+  color: #232222!important;
+
+  a{
+    letter-spacing: 0.2px!important;
+    color: #232222;
+
+}
+  strong {
+    font-weight: 500!important;
+  }
+}
+.disableScroll {
+  overflow: hidden;
+}
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}
+body.blockScroll {
+
+  overflow: hidden;
+}
+.app-bg {
+  background-image: url("/assets/image/bg.svg");
+  background-size: 60%;
+  background-position: center;
+
+
+}
+.app-root{
+  min-height: 100%;
+}
+.h1{
+  font-size: 40px;
+  font-weight: 500;
+  padding: 4px 16px;
+  margin-bottom: 18px;
+  margin-left: -16px;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(168,226,255,1) 0%, rgba(255,255,255,0) 60%);
+  border-radius: 8px;
+}
+
+
+.h2{
+  font-size: 32px;
+  font-weight: 500;
+  padding: 4px 16px;
+  margin-bottom: 16px;
+    margin-left: -16px;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,.8) 0%, rgba(168,226,255,.6) 0%, rgba(255,255,255,0) 60%);
+  border-radius: 8px;
+
+}
+.h3{
+  font-size: 26px;
+  font-weight: 400;
+  padding: 4px 16px;
+  margin-bottom: 16px;
+    margin-left: -16px;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,.6) 0%, rgba(168,226,255,.4) 0%, rgba(255,255,255,0) 60%);
+  border-radius: 8px;
+
+}
+
+.mdc-checkbox__background{
+  border-color: #4180c4 !important;
+}
+
+.mdc-checkbox--selected {
+  background-color: rgba(65, 128, 196, 0.73) !important;
+}
+.mdc-checkbox .mdc-checkbox__native-control:focus:checked~.mdc-checkbox__ripple{
+  background-color: rgba(65, 128, 196, 0.73) !important;
+}
+.mdc-checkbox .mdc-checkbox__native-control:enabled:checked~.mdc-checkbox__background, .mdc-checkbox .mdc-checkbox__native-control:enabled:indeterminate~.mdc-checkbox__background, .mdc-checkbox .mdc-checkbox__native-control[data-indeterminate=true]:enabled~.mdc-checkbox__background {
+  background-color: #3b82f6!important;
+  border-color: #3b82f6!important;
+}
+@media screen and (max-width: 900px){
+  ul li {
+    font-size: 14px;
+  }
+}

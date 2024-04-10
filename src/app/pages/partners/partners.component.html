@@ -1,0 +1,62 @@
+<!--<app-h1>{{ data.title }}</app-h1>-->
+<app-headline [grade]="1">{{ data.title }}</app-headline>
+
+<app-info-section>
+  <app-paragraph *ngFor="let item of data.paragraphs"> {{ item }}</app-paragraph>
+</app-info-section>
+
+<app-headline [grade]="2">{{ contacts.title }}</app-headline>
+
+<ul class="ulContacts">
+  <li class="liContacts">
+    <ul class="innerList">
+      <li class="flex justify-between">
+        <p class="flex flex-col">
+          <span>
+            <strong> {{ contacts.element_1.title_1 }}</strong></span
+          >
+          <a class="contactLink" href="{{ contacts.element_1.site.href }}" target="_blank">
+            {{ contacts.element_1.site.view }}</a
+          >
+        </p>
+      </li>
+      <li class="flex justify-between">
+        <p class="flex flex-col">
+          <span
+            ><strong>{{ contacts.element_1.title_2 }}</strong>
+          </span>
+          <a class="contactLink" href="mailto:{{ contacts.element_1.email }}">
+            {{ contacts.element_1.email }}</a
+          >
+        </p>
+      </li>
+    </ul>
+  </li>
+
+  <li class="liContacts">
+    <ul class="innerList">
+      <li class="mb-[12px]">
+        <strong>{{ contacts.element_2.title }}</strong>
+      </li>
+      <li
+        class="flex justify-between"
+        *ngFor="let phone of contacts.element_2.phones.view; let i = index"
+      >
+        <a class="contactLink" href="tel:{{ contacts.element_2.phones.href[i] }}">{{ phone }}</a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="liContacts">
+    <ul class="innerList">
+      <li class="mb-[12px] flex justify-between">
+        <strong>{{ contacts.element_3.title }}</strong>
+      </li>
+      <li class="flex justify-between">
+        <a class="contactLink" href="tel:{{ contacts.element_3.phones.href }}">{{
+          contacts.element_3.phones.view
+        }}</a>
+      </li>
+    </ul>
+  </li>
+</ul>

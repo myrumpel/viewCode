@@ -1,0 +1,19 @@
+<ng-container>
+  <div class="app-wrapper" [id]="DarkMode.darkMode$.value ? 'dark' : ''" #scrollableElement>
+    <app-container>
+      <app-header></app-header>
+      <main id="main" [ngClass]="{ 'bg-main-white': !DarkMode.darkMode$.value }">
+        <router-outlet></router-outlet>
+      </main>
+      <app-footer></app-footer>
+      <button
+        class="btnToTop"
+        [ngClass]="{ hideBtnToTop: hideBtn }"
+        (click)="scrollToTop()"
+        mat-fab
+      >
+        <mat-icon class="iconToTop">arrow_forward_ios</mat-icon>
+      </button>
+    </app-container>
+  </div>
+</ng-container>

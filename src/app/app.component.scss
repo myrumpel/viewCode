@@ -1,0 +1,45 @@
+#main {
+  border-radius: 8px;
+  margin-top: 104px;
+  margin-bottom: auto;
+  padding: 106px 16px 106px 16px;
+  min-height: 100%;
+}
+.main-wrapper {
+  position: relative;
+}
+.iconToTop {
+  transform: rotate(-90deg);
+}
+.btnToTop {
+  background-color: rgba(0, 120, 177, 1);
+  position: fixed;
+  bottom: 70px;
+  right: 10%;
+  width: 56px;
+  height: 56px;
+  transition: opacity 0.2s ease-in-out;
+  z-index: 5;
+}
+.hideBtnToTop {
+  opacity: 0;
+}
+#dark {
+  background-color: #1e1e1e !important;
+  color: white !important;
+}
+:host-context(#dark) {
+  #main {
+    background-color: #252526 !important;
+  }
+  .btnToTop {
+    background-color: red;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #main {
+    margin-top: 0;
+    padding: 0 0 64px 0;
+  }
+}

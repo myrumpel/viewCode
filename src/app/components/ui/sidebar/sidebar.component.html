@@ -1,0 +1,9 @@
+<nav class="sidebar">
+  <ul>
+    <li *ngFor="let item of items">
+      <a routerLinkActive="active-sidebar-link" routerLink="{{ item.link }}">
+        {{ item.text }}
+      </a>
+    </li>
+  </ul>
+</nav>

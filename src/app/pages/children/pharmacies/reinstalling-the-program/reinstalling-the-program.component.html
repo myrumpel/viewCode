@@ -1,0 +1,15 @@
+<div class="content">
+  <app-headline [grade]="2">{{ data.title }}</app-headline>
+  <app-paragraph>
+    <ul>
+      <li class="mb-[8px]" *ngFor="let item of data.content">{{ item }}</li>
+    </ul>
+  </app-paragraph>
+  <a
+    class="download-link"
+    href="{{ data.buttons.link }}"
+    download="{{ data.buttons.fileText }}"
+    mat-flat-button
+    >{{ data.buttons.text }}</a
+  >
+</div>

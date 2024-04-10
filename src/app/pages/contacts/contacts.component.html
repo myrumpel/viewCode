@@ -1,0 +1,47 @@
+<!--<app-h1></app-h1>-->
+<app-headline [grade]="1">{{ data.title }}</app-headline>
+<ul class="ulContacts">
+  <li class="liContacts">
+    <ul class="innerList">
+      <li class="mb-[12px] flex justify-between">
+        <strong>{{ data.element_1.title_1 }}</strong>
+      </li>
+      <li class="flex justify-between">{{ data.element_1.schedule }}</li>
+      <li class="flex justify-between">
+        <p class="flex flex-col">
+          <span>{{ data.element_1.title_2 }}</span>
+          <a class="contactLink" href="mailto:{{ data.element_1.email }}">
+            {{ data.element_1.email }}</a
+          >
+        </p>
+      </li>
+    </ul>
+  </li>
+  <li class="liContacts">
+    <ul class="innerList">
+      <li class="mb-[12px]">
+        <strong>{{ data.element_2.title }}</strong>
+      </li>
+      <li class="flex justify-between" *ngFor="let item of data.element_2.cities; let i = index">
+        <span>{{ item }}</span>
+        <a class="contactLink" href="tel:{{ data.element_2.phoneNumbersHref[i] }}">{{
+          data.element_2.phoneNumbersView[i]
+        }}</a>
+      </li>
+    </ul>
+  </li>
+
+  <li class="liContacts">
+    <ul class="innerList">
+      <li class="mb-[12px] flex justify-between">
+        <strong>{{ data.element_3.title }}</strong>
+      </li>
+      <li class="flex justify-between">{{ data.element_3.schedule }}</li>
+      <li class="flex justify-between">
+        <a class="contactLink" href="tel:{{ data.element_3.phoneNumberHref }}">{{
+          data.element_3.phoneNumberView
+        }}</a>
+      </li>
+    </ul>
+  </li>
+</ul>

@@ -1,0 +1,9 @@
+@import 'content';
+@import 'download-link';
+
+:host-context(#dark){
+    a:not(.download-link){
+        color: whitesmoke!important;
+    }
+  
+}

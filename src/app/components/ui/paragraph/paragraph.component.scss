@@ -1,0 +1,15 @@
+.paragraph {
+  max-width: 80%;
+  margin-bottom: 18px;
+}
+
+
+@media screen and (max-width: 900px) {
+  .paragraph {
+    max-width: 100%;
+    margin-bottom: 8px;
+
+    font-size: 14px!important;
+  }
+
+}

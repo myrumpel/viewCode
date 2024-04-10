@@ -1,0 +1,15 @@
+<app-select
+  [linksArray]="representativesLinks"
+  selectStartText="Выберите страницу"
+></app-select>
+<div class="pageWrapper flex">
+  <div class="sidebar-wrapper">
+    <app-sidebar [items]="items"></app-sidebar>
+  </div>
+
+  <div class="w-full">
+    <app-content-box>
+      <div class="w-full"><router-outlet></router-outlet></div>
+    </app-content-box>
+  </div>
+</div>

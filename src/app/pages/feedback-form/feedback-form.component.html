@@ -1,0 +1,130 @@
+<section class="form-keeper">
+  <div class="titleWarnWrapper">
+    <app-headline [grade]="1">Связаться с нами</app-headline>
+  </div>
+  <form class="form" [formGroup]="feedbackForm">
+    <label
+      class="formLabel"
+      for="name"
+      [ngClass]="{
+        errorLabel: fieldIsValid('name', 'red'),
+        greenLabel: fieldIsValid('name', 'green')
+      }"
+    >
+      {{ fieldIsValid('name', 'red') ? 'Имя обязательно для заполнения' : 'Имя:' }}
+    </label>
+    <input
+      class="formElem"
+      type="text"
+      name="name"
+      id="name"
+      maxlength="60"
+      autocomplete="off"
+      formControlName="name"
+      [ngClass]="{
+        errorField: fieldIsValid('name', 'red'),
+        greenField: fieldIsValid('name', 'green')
+      }"
+    />
+    <label
+      class="formLabel"
+      for="phoneNumber"
+      [ngClass]="{
+        errorLabel: fieldIsValid('phoneNumber', 'red'),
+        greenLabel: fieldIsValid('phoneNumber', 'green')
+      }"
+    >
+      {{
+        fieldIsValid('phoneNumber', 'red') ? 'Введите корректный номер телефона' : 'Номер телефона:'
+      }}
+    </label>
+    <input
+      class="formElem"
+      mask="(000) 000-00-00"
+      prefix="+7 "
+      [dropSpecialCharacters]="false"
+      type="text"
+      name="phoneNumber"
+      id="phoneNumber"
+      maxlength="20"
+      autocomplete="off"
+      formControlName="phoneNumber"
+      [ngClass]="{
+        errorField: fieldIsValid('phoneNumber', 'red'),
+        greenField: fieldIsValid('phoneNumber', 'green')
+      }"
+    />
+    <label
+      class="formLabel"
+      for="email"
+      [ngClass]="{
+        errorLabel: fieldIsValid('email', 'red'),
+        greenLabel: fieldIsValid('email', 'green')
+      }"
+    >
+      {{ fieldIsValid('email', 'red') ? 'Введите корректный E-mail' : 'E-mail:' }}
+    </label>
+    <input
+      class="formElem"
+      type="text"
+      name="email"
+      id="email"
+      maxlength="40"
+      autocomplete="off"
+      formControlName="email"
+      [ngClass]="{
+        errorField: fieldIsValid('email', 'red'),
+        greenField: fieldIsValid('email', 'green')
+      }"
+    />
+
+    <label
+      class="formLabel"
+      for="body"
+      [ngClass]="{
+        errorLabel: fieldIsValid('body', 'red'),
+        greenLabel: fieldIsValid('body', 'green')
+      }"
+      >{{
+        fieldIsValid('body', 'red')
+          ? 'У обращения должно быть минимум 6 символов'
+          : 'Текст обращения:'
+      }}
+    </label>
+    <textarea
+      class="formElem"
+      type="text"
+      name="body"
+      id="body"
+      maxlength="300"
+      autocomplete="off"
+      formControlName="body"
+      [ngClass]="{
+        errorField: fieldIsValid('body', 'red'),
+        greenField: fieldIsValid('body', 'green')
+      }"
+    ></textarea>
+    <mat-checkbox class="agree" name="agree" formControlName="agree"
+      ><span class="agree-text">Принимаю условия </span>
+      <a routerLink="/agreement" class="formLink">пользовательского соглашения</a></mat-checkbox
+    >
+    <button
+      class="submit"
+      mat-raised-button
+      (click)="onSubmit()"
+      [disabled]="feedbackForm.invalid || feedbackForm.get('agree')?.value === false"
+    >
+      Отправить
+    </button>
+    <div class="warnWrapper">
+      <ul class="warnMessageWrapper">
+        <li
+          class="warnMessage errorLabel"
+          *ngIf="feedbackForm.get('agree')?.value === false && feedbackForm.get('agree')?.touched"
+        >
+          Для отправки обращения необходимо принять пользовательское соглашение
+        </li>
+      </ul>
+    </div>
+  </form>
+</section>

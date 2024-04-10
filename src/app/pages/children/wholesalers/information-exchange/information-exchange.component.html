@@ -1,0 +1,151 @@
+<div class="content">
+  <app-headline [grade]="2">{{ data.title }}</app-headline>
+  <app-info-section>
+    <app-headline [grade]="4">{{ data.section_1.title }}</app-headline>
+
+    <app-paragraph *ngFor="let item of data.section_1.content">{{ item }}</app-paragraph>
+  </app-info-section>
+
+  <app-info-section>
+    <app-headline [grade]="4"> {{ data.section_2.title }}</app-headline>
+
+    <app-paragraph>{{ data.section_2.content }}</app-paragraph>
+  </app-info-section>
+
+  <app-info-section>
+    <app-headline [grade]="4"> {{ data.section_3.title }}</app-headline>
+
+    <app-paragraph *ngFor="let item of data.section_3.content">{{ item }}</app-paragraph>
+    <img src="{{ data.section_3.images.src }}" alt="{{ data.section_3.title }}" />
+  </app-info-section>
+
+  <app-info-section>
+    <app-headline [grade]="4"> {{ data.section_4.title }}</app-headline>
+
+    <app-paragraph *ngFor="let item of data.section_4.content">{{ item }}</app-paragraph>
+    <img src="{{ data.section_4.images.src }}" alt="{{ data.section_4.title }}" />
+  </app-info-section>
+
+  <app-info-section>
+    <app-headline [grade]="4"> {{ data.section_5.title }}</app-headline>
+
+    <app-paragraph *ngFor="let item of data.section_5.content">{{ item }}</app-paragraph>
+    <img src="{{ data.section_5.images.src }}" alt="{{ data.section_5.title }}" />
+  </app-info-section>
+
+  <app-info-section>
+    <app-headline [grade]="4"> {{ data.section_6.title }}</app-headline>
+
+    <app-paragraph *ngFor="let item of data.section_6.content">{{ item }}</app-paragraph>
+
+    <img src="{{ data.section_6.images.src }}" alt="{{ data.section_6.title }}" />
+  </app-info-section>
+
+  <app-info-section>
+    <app-headline [grade]="4"> {{ data.section_7.title }}</app-headline>
+
+    <app-paragraph>{{ data.section_7.content }}</app-paragraph>
+
+    <img src="{{ data.section_7.images.src }}" alt="{{ data.section_7.title }}" />
+  </app-info-section>
+
+  <app-info-section>
+    <app-headline [grade]="4"> {{ data.section_8.title }}</app-headline>
+
+    <app-paragraph *ngFor="let item of data.section_8.content">{{ item }}</app-paragraph>
+
+    <img src="{{ data.section_8.images.src }}" alt="{{ data.section_8.title }}" />
+  </app-info-section>
+
+  <app-info-section>
+    <app-headline [grade]="4"> {{ data.section_9.title }}</app-headline>
+
+    <app-paragraph *ngFor="let item of data.section_9.content">{{ item }}</app-paragraph>
+
+    <img src="{{ data.section_9.images.src }}" alt="{{ data.section_9.title }}" />
+  </app-info-section>
+
+  <app-info-section>
+    <app-headline [grade]="4"> {{ data.section_10.title }}</app-headline>
+
+    <app-paragraph>{{ data.section_10.content_1 }} </app-paragraph>
+    <app-paragraph>
+      <app-headline [grade]="5"> {{ data.section_10.contentList_1.title }}</app-headline>
+
+      <ul>
+        <li *ngFor="let item of data.section_10.contentList_1.content">
+          {{ item }}
+        </li>
+      </ul>
+    </app-paragraph>
+    <app-paragraph>
+      <app-headline [grade]="5"> {{ data.section_10.contentList_2.title }}</app-headline>
+
+      <ul>
+        <li *ngFor="let item of data.section_10.contentList_2.content">
+          {{ item }}
+        </li>
+      </ul>
+    </app-paragraph>
+    <app-paragraph>{{ data.section_10.content_2 }} </app-paragraph>
+    <img src="{{ data.section_10.images.src }}" alt="{{ data.section_10.title }}" />
+  </app-info-section>
+
+  <app-info-section>
+    <app-headline [grade]="4"> {{ data.section_11.title }}</app-headline>
+
+    <app-paragraph *ngFor="let item of data.section_11.content">{{ item }}</app-paragraph>
+
+    <img src="{{ data.section_11.images.src }}" alt="{{ data.section_11.title }}" />
+  </app-info-section>
+
+  <app-info-section>
+    <app-headline [grade]="4"> {{ data.section_12.title }}</app-headline>
+
+    <app-paragraph *ngFor="let item of data.section_12.content">{{ item }}</app-paragraph>
+
+    <img src="{{ data.section_12.images.src }}" alt="{{ data.section_12.title }}" />
+  </app-info-section>
+
+  <app-info-section>
+    <app-headline [grade]="4"> {{ data.section_13.title }}</app-headline>
+
+    <app-paragraph>{{ data.section_13.content }}</app-paragraph>
+
+    <img src="{{ data.section_13.images.src }}" alt="{{ data.section_13.title }}" />
+  </app-info-section>
+
+  <app-info-section>
+    <app-headline [grade]="4"> {{ data.section_14.title }}</app-headline>
+
+    <app-paragraph>{{ data.section_14.content }}</app-paragraph>
+
+    <img src="{{ data.section_14.images.src }}" alt="{{ data.section_14.title }}" />
+  </app-info-section>
+
+  <app-info-section>
+    <app-headline [grade]="4"> {{ data.section_15.title }}</app-headline>
+
+    <app-paragraph>{{ data.section_15.content }}</app-paragraph>
+  </app-info-section>
+
+  <app-info-section>
+    <app-headline [grade]="4"> {{ data.section_16.title }}</app-headline>
+
+    <app-paragraph>{{ data.section_16.content }}</app-paragraph>
+  </app-info-section>
+
+  <app-info-section>
+    <app-headline [grade]="4"> {{ data.section_17.title }}</app-headline>
+
+    <app-paragraph *ngFor="let item of data.section_17.content">{{ item }}</app-paragraph>
+  </app-info-section>
+
+  <app-info-section>
+    <app-headline [grade]="4"> {{ data.section_18.title }}</app-headline>
+
+    <app-paragraph>{{ data.section_18.content }}</app-paragraph>
+
+    <img src="{{ data.section_18.images.src }}" alt="{{ data.section_18.title }}" />
+  </app-info-section>
+</div>

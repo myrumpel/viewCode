@@ -1,0 +1,28 @@
+<div class="content">
+  <app-headline [grade]="2">{{ data.title }}</app-headline>
+  <app-headline [grade]="4">{{ data.content.title }}</app-headline>
+
+  <app-paragraph
+    >Заявку формируем в удобном для вас формате Возможно сформировать в dbf формате с нужными вам
+    полями, либо в текстовом формате.</app-paragraph
+  ><app-paragraph
+    >Желаемый формат заявки присылайте на почту
+    <a href="mailto:office@sklit.org">office&#64;sklit.org</a>.</app-paragraph
+  >
+  <app-paragraph>Возможная информация заявки:</app-paragraph>
+
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z1">
+    <ng-container matColumnDef="code">
+      <th mat-header-cell *matHeaderCellDef>Название колонки</th>
+      <td mat-cell *matCellDef="let element">{{ element.code }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="description">
+      <th mat-header-cell *matHeaderCellDef>Описание</th>
+      <td mat-cell *matCellDef="let element">{{ element.description }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+</div>

@@ -1,0 +1,13 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 24px 64px 24px;
+  min-width: 100% ;
+
+}
+@media screen and (max-width: 900px) {
+  .content {
+    padding: 12px 12px 64px;
+
+  }
+}

@@ -1,0 +1,86 @@
+<div class="content">
+  <app-headline [grade]="2">{{ data.title }}</app-headline>
+
+  <app-paragraph>{{ data.content.text_1 }}</app-paragraph>
+  <a
+    class="download-link left-link"
+    href="{{ data.buttons.link }}"
+    download="{{ data.buttons.fileText }}"
+    mat-flat-button
+    >{{ data.buttons.text }}</a
+  >
+  <app-paragraph
+    ><ul>
+      <li *ngFor="let item of data.content.textList_1">{{ item }}</li>
+    </ul></app-paragraph
+  >
+  <app-paragraph *ngFor="let item of data.content.text_2">{{ item }}</app-paragraph>
+  <img class="w-max" src="{{ data.images.img_1 }}" alt="" />
+  <app-headline [grade]="5">рис №1</app-headline>
+
+  <app-paragraph>{{ data.content.text_3 }}</app-paragraph>
+  <img class="w-max" src="{{ data.images.img_2 }}" alt="" />
+  <app-headline [grade]="5">рис №2</app-headline>
+
+  <app-paragraph>{{ data.content.text_4 }}</app-paragraph>
+  <img class="w-max" src="{{ data.images.img_3 }}" alt="" />
+  <app-headline [grade]="5">рис №3</app-headline>
+
+  <app-paragraph>{{ data.content.text_5 }}</app-paragraph>
+
+  <img class="w-max" src="{{ data.images.img_4 }}" alt="" />
+  <app-headline [grade]="5">рис №4</app-headline>
+
+  <app-paragraph>{{ data.content.text_6 }}</app-paragraph>
+
+  <img class="w-max" src="{{ data.images.img_5 }}" alt="" />
+  <app-headline [grade]="5">рис №5</app-headline>
+
+  <app-paragraph>{{ data.content.text_7 }}</app-paragraph>
+
+  <img class="w-max" src="{{ data.images.img_6 }}" alt="" />
+  <app-headline [grade]="5">рис №6</app-headline>
+
+  <app-paragraph>{{ data.content.text_8 }}</app-paragraph>
+
+  <img class="w-max" src="{{ data.images.img_7 }}" alt="" />
+  <app-headline [grade]="5">рис №7</app-headline>
+
+  <app-paragraph>{{ data.content.text_9 }}</app-paragraph>
+
+  <img class="w-max" src="{{ data.images.img_8 }}" alt="" />
+  <app-headline [grade]="5">рис №8</app-headline>
+
+  <app-paragraph>{{ data.content.text_10 }}</app-paragraph>
+
+  <img class="w-max" src="{{ data.images.img_9 }}" alt="" />
+  <app-headline [grade]="5">рис №9</app-headline>
+
+  <app-paragraph>{{ data.content.text_11 }}</app-paragraph>
+
+  <img class="w-max" src="{{ data.images.img_10 }}" alt="" />
+  <app-headline [grade]="5">рис №10</app-headline>
+
+  <app-paragraph>{{ data.content.text_12 }}</app-paragraph>
+
+  <img class="w-max" src="{{ data.images.img_11 }}" alt="" />
+  <app-headline [grade]="5">рис №11</app-headline>
+
+  <app-paragraph>{{ data.content.text_13 }}</app-paragraph>
+
+  <img class="w-max" src="{{ data.images.img_12 }}" alt="" />
+  <app-headline [grade]="5">рис №12</app-headline>
+
+  <app-paragraph>{{ data.content.text_14 }}</app-paragraph>
+
+  <img class="w-max" src="{{ data.images.img_13 }}" alt="" />
+  <app-headline [grade]="5">рис №13</app-headline>
+
+  <app-paragraph>{{ data.content.text_15 }}</app-paragraph>
+
+  <img class="w-max" src="{{ data.images.img_14 }}" alt="" />
+  <app-headline [grade]="5">рис №14</app-headline>
+
+  <app-paragraph>{{ data.content.text_16 }}</app-paragraph>
+  <p *ngFor="let item of data.content.text_17">{{ item }}</p>
+</div>

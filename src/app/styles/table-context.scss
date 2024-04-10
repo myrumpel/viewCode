@@ -1,0 +1,14 @@
+:host-context(#dark){
+    .mat-mdc-table{
+        background-color: #3e3e42!important;
+        box-shadow: 0 0 3px 3px rgba(255,255,255,0.01);
+      .mat-mdc-header-row,.mat-mdc-row{
+          color: whitesmoke!important;
+
+        }
+        .mat-mdc-header-cell,.mat-mdc-cell {
+            border-color: rgba(245, 245, 245, 0.639)!important;
+        }
+
+    }
+}

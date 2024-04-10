@@ -1,0 +1,43 @@
+<app-popup [isActive]="isPopupActive">
+  <ul class="mobileMenuList">
+    <li *ngFor="let item of menuLinks">
+      <a class="mobile-menu-link" routerLink="{{ item.link }}" (click)="closePopup()">{{
+        item.text
+      }}</a>
+    </li>
+  </ul>
+</app-popup>
+<div class="header-wrapper">
+  <header
+    [@scrollHeader]="scrollService.initState | async"
+    class="h-[80px] flex flex-col my-header"
+  >
+    <div class="first-line">
+      <a routerLink="/home" class="flex items-center">
+        <img class="logo" src="../../../../assets/image/scales.svg" alt="sklit logo" />
+        <p class="logo-text">СКЛИТ</p>
+      </a>
+      <div class="icons-keeper">
+        <a routerLink="/feedback" mat-fab color="primary">
+          <mat-icon>forward_to_inbox</mat-icon>
+        </a>
+        <button mat-fab color="primary" (click)="click()">
+          <mat-icon>{{ isDark.value ? 'dark_mode' : 'wb_sunny' }}</mat-icon>
+        </button>
+        <button class="mobileMenu" mat-fab (click)="togglePopup()">
+          <mat-icon> {{ isPopupActive ? 'close' : 'menu' }} </mat-icon>
+        </button>
+      </div>
+    </div>
+
+    <nav class="main-nav">
+      <a
+        routerLinkActive="activeLink"
+        routerLink="{{ item.link }}"
+        mat-raised-button
+        *ngFor="let item of menuLinks"
+        >{{ item.text }}</a
+      >
+    </nav>
+  </header>
+</div>

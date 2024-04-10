@@ -1,0 +1,206 @@
+<div class="content">
+  <app-headline [grade]="2">{{ data.title }}</app-headline>
+  <app-headline [grade]="4">{{ data.content.element_1.title }}</app-headline>
+  <app-paragraph *ngFor="let item of data.content.element_1.content">{{ item }}</app-paragraph>
+  <app-headline [grade]="4">{{ data.content.element_2.title }}</app-headline>
+  <img class="mb-[24px]" src="{{ data.content.element_2.images.image_1 }}" alt="" />
+  <app-paragraph>{{ data.content.element_2.content.text }}</app-paragraph>
+  <app-paragraph *ngFor="let item of data.content.element_2.content.textList_1">{{
+    item
+  }}</app-paragraph>
+
+  <img class="mb-[24px]" src="{{ data.content.element_2.images.image_2 }}" alt="" />
+  <app-paragraph *ngFor="let item of data.content.element_2.content.textList_2">{{
+    item
+  }}</app-paragraph>
+  <app-headline [grade]="4">{{ data.content.element_3.title }}</app-headline>
+
+  <img class="mb-[24px]" src="{{ data.content.element_3.image }}" alt="" />
+  <app-headline [grade]="4">{{ data.content.element_4.title }}</app-headline>
+
+  <app-paragraph
+    ><ul>
+      <li *ngFor="let item of data.content.element_4.textList">{{ item }}</li>
+    </ul></app-paragraph
+  >
+  <app-headline [grade]="4">{{ data.content.element_5.title }}</app-headline>
+
+  <app-paragraph
+    ><ul>
+      <li *ngFor="let item of data.content.element_5.textList">{{ item }}</li>
+    </ul></app-paragraph
+  >
+  <app-headline [grade]="4">{{ data.content.element_5.title }}</app-headline>
+
+  <app-paragraph
+    ><ul>
+      <li *ngFor="let item of data.content.element_5.textList">{{ item }}</li>
+    </ul></app-paragraph
+  >
+  <app-headline [grade]="4">{{ data.content.element_6.title }}</app-headline>
+
+  <app-paragraph
+    ><ul>
+      <li *ngFor="let item of data.content.element_6.textList">{{ item }}</li>
+    </ul></app-paragraph
+  >
+  <app-headline [grade]="4">{{ data.content.element_7.title }}</app-headline>
+
+  <app-paragraph
+    ><ul>
+      <li *ngFor="let item of data.content.element_7.textList">{{ item }}</li>
+    </ul></app-paragraph
+  >
+  <app-headline [grade]="4">{{ data.content.element_8.title }}</app-headline>
+
+  <app-paragraph
+    ><ul>
+      <li *ngFor="let item of data.content.element_8.textList">{{ item }}</li>
+    </ul></app-paragraph
+  >
+  <app-headline [grade]="4">{{ data.content.element_9.title }}</app-headline>
+
+  <app-paragraph
+    ><ul>
+      <li *ngFor="let item of data.content.element_9.textList">{{ item }}</li>
+    </ul></app-paragraph
+  >
+  <app-headline [grade]="4">{{ data.content.element_10.title }}</app-headline>
+
+  <app-paragraph
+    ><ul>
+      <li *ngFor="let item of data.content.element_10.textList">
+        {{ item }}
+      </li>
+    </ul></app-paragraph
+  >
+  <app-headline [grade]="4">{{ data.content.element_11.title }}</app-headline>
+
+  <img class="mb-[24px]" src="{{ data.content.element_11.image }}" alt="" />
+
+  <app-paragraph *ngFor="let item of data.content.element_11.text"> {{ item }}</app-paragraph>
+  <app-headline [grade]="4">{{ data.content.element_12.title }}</app-headline>
+
+  <img class="mb-[24px]" src="{{ data.content.element_12.image }}" alt="" />
+
+  <app-paragraph> {{ data.content.element_12.content.text }}</app-paragraph>
+  <app-paragraph>
+    <ul>
+      <li *ngFor="let item of data.content.element_12.content.textList">
+        {{ item }}
+      </li>
+    </ul>
+  </app-paragraph>
+  <app-headline [grade]="4">{{ data.content.element_13.title }}</app-headline>
+
+  <app-paragraph> {{ data.content.element_13.text_1 }}</app-paragraph>
+  <app-paragraph>
+    <ul>
+      <li *ngFor="let item of data.content.element_13.textList_1">
+        {{ item }}
+      </li>
+    </ul>
+  </app-paragraph>
+  <app-paragraph *ngFor="let item of data.content.element_13.text_2">
+    {{ item }}
+  </app-paragraph>
+  <app-paragraph>
+    <ul>
+      <li *ngFor="let item of data.content.element_13.textList_2">
+        {{ item }}
+      </li>
+    </ul>
+  </app-paragraph>
+  <app-headline [grade]="4">{{ data.content.element_14.title }}</app-headline>
+
+  <app-paragraph> {{ data.content.element_14.text }}</app-paragraph>
+  <app-headline [grade]="4">{{ data.content.element_15.title }}</app-headline>
+
+  <app-paragraph> {{ data.content.element_15.text_1 }}</app-paragraph>
+  <img class="mb-[24px]" src="{{ data.content.element_15.images.image_1 }}" alt="" />
+  <app-paragraph *ngFor="let item of data.content.element_15.text_2">
+    {{ item }}
+  </app-paragraph>
+  <img class="mb-[24px]" src="{{ data.content.element_15.images.image_2 }}" alt="" />
+  <app-paragraph *ngFor="let item of data.content.element_15.text_3">
+    {{ item }}
+  </app-paragraph>
+  <app-headline [grade]="4">{{ data.content.element_15.subtitle }}</app-headline>
+
+  <app-paragraph>
+    {{ data.content.element_15.text_4 }}
+  </app-paragraph>
+  <app-info-section>
+    <app-headline [grade]="4">{{ data.content.element_16.title }}</app-headline>
+    <app-headline [grade]="5">{{ data.content.element_16.subtitle }}</app-headline>
+
+    <app-paragraph>
+      {{ data.content.element_16.text }}
+    </app-paragraph>
+    <div class="tableWrapper">
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z1">
+        <ng-container matColumnDef="code">
+          <th mat-header-cell *matHeaderCellDef>Тип</th>
+          <td mat-cell *matCellDef="let element">{{ element.code }}</td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="columnName">
+          <th mat-header-cell *matHeaderCellDef>Название колонки</th>
+          <td mat-cell *matCellDef="let element">
+            {{ element.description }}
+          </td> </ng-container
+        ><ng-container matColumnDef="description">
+          <th mat-header-cell *matHeaderCellDef>Описание</th>
+          <td mat-cell *matCellDef="let element">
+            {{ element.description }}
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+      </table>
+    </div>
+  </app-info-section>
+
+  <app-info-section>
+    <app-headline [grade]="5">{{ data.content.element_17.subtitle }}</app-headline>
+
+    <app-paragraph>
+      {{ data.content.element_17.text }}
+    </app-paragraph>
+    <table mat-table [dataSource]="dataSourceSecondTable" class="mat-elevation-z1">
+      <ng-container matColumnDef="code">
+        <th mat-header-cell *matHeaderCellDef>Тип</th>
+        <td mat-cell *matCellDef="let element">{{ element.code }}</td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="columnName">
+        <th mat-header-cell *matHeaderCellDef>Название колонки</th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.description }}
+        </td> </ng-container
+      ><ng-container matColumnDef="description">
+        <th mat-header-cell *matHeaderCellDef>Описание</th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.description }}
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr></table
+  ></app-info-section>
+  <app-headline [grade]="4">{{ data.content.element_18.subtitle }}</app-headline>
+
+  <app-paragraph *ngFor="let item of data.content.element_18.text">
+    {{ item }}
+  </app-paragraph>
+  <a
+    class="download-link"
+    href="{{ data.content.element_18.buttons.link }}"
+    download=" {{ data.content.element_18.buttons.fileText }}"
+    mat-flat-button
+    >{{ data.content.element_18.buttons.text }}</a
+  >
+</div>

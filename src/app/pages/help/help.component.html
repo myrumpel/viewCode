@@ -1,0 +1,10 @@
+<app-headline [grade]="1">{{ data.title }}</app-headline>
+
+<app-headline [grade]="4">{{ data.subtitle_1 }}</app-headline>
+
+<app-paragraph *ngFor="let item of data.content">
+  {{ item }}
+</app-paragraph>
+<app-headline [grade]="2">{{ data.subtitle_2 }}</app-headline>
+
+<a href="{{ data.site }}" target="_blank">{{ data.site }}</a>

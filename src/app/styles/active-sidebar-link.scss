@@ -1,0 +1,15 @@
+.active-sidebar-link{
+  transform: translateX(12px);
+  position: relative;
+  &::before{
+    content: '';
+    position: absolute;
+    left: -12px;
+    top: 0;
+    bottom: 0;
+    width: 2.5px;
+    height: 100%;
+    background-color: #53a8ff;
+
+  }
+}

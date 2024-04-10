@@ -1,0 +1,19 @@
+.download-link{
+  padding: 8px 16px;
+  height: auto;
+  text-align: center;
+  align-self: end;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow:  0 0 15px -4px rgba(119, 136, 153, 0.27), inset 0px 0px 21px 4px rgba(255,255,255,0.34) ;
+  overflow: hidden;
+  border: 1px solid rgba(112, 128, 144, 0.25);
+  margin-top: 24px;
+  max-width: fit-content;
+  width: 100%;
+  transition: box-shadow .1s ease;
+  &:hover{
+    box-shadow:  0 0 15px -4px rgba(119, 136, 153, 0.87), inset 0px 0px 21px 4px rgba(255,255,255,0.44) ;
+
+  }
+}

@@ -1,0 +1,21 @@
+.container-custom {
+  background-color: rgba(237, 241, 255, 0.95);
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  margin-bottom: auto;
+  overflow: auto;
+}
+
+
+:host-context(#dark){
+  .container-custom{
+    background-color: #252526 !important;
+  }
+}
+@media screen and (max-width: 900px) {
+  .container-custom {
+    padding-top: 110px;
+
+  }
+}

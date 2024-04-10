@@ -1,0 +1,8 @@
+<div class="content">
+  <app-headline [grade]="2">{{ data.title }}</app-headline>
+  <app-headline [grade]="4">{{ data.subtitle }}</app-headline>
+  <ul>
+    <li class="mb-[12px]" *ngFor="let item of data.content">{{ item }}</li>
+  </ul>
+  <app-paragraph class="font-[500]">{{ data.warn }}</app-paragraph>
+</div>

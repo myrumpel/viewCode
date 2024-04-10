@@ -1,0 +1,32 @@
+<div class="content">
+  <app-headline [grade]="2">{{ data.title }}</app-headline>
+
+  <app-headline [grade]="4">{{ data.subtitle_1 }}</app-headline>
+
+  <app-paragraph>{{ data.content.text_1 }}</app-paragraph>
+  <app-paragraph
+    ><ul class="list-decimal">
+      <li *ngFor="let item of data.content.list">{{ item }}</li>
+    </ul></app-paragraph
+  >
+  <app-paragraph *ngFor="let item of data.content.textList_1"> {{ item }}</app-paragraph>
+  <app-headline [grade]="4">{{ data.subtitle_2 }}</app-headline>
+
+  <app-paragraph *ngFor="let item of data.content.textList_2">
+    <ul class="list-disc">
+      <li>{{ item }}</li>
+    </ul>
+  </app-paragraph>
+  <app-paragraph *ngFor="let item of data.content.textList_3">{{ item }}</app-paragraph>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z1">
+    <ng-container matColumnDef="code">
+      <td mat-cell *matCellDef="let element">{{ element.code }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="description">
+      <td mat-cell *matCellDef="let element">{{ element.description }}</td>
+    </ng-container>
+
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+</div>
