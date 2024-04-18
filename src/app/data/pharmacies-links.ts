@@ -6,7 +6,7 @@ export const pharmaciesLinks: sidebarLinks[] = [
     text: 'Описание раздела',
   },
   {
-    link: '/pharmacies/view-price',
+    link: '/pharmacies/view-price-pharmacies',
     text: 'Просмотр прайсов',
   },
   {

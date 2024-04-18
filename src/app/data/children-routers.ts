@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { ViewPriceComponent } from '../pages/children/wholesalers/view-price/view-price.component';
+import { ViewPricePharmaciesComponent } from '../pages/children/pharmacies/view-price-pharmacies/view-price-pharmacies.component';
 import { ReportsComponent } from '../pages/children/representatives/reports/reports.component';
 import { MaterialsAccountingComponent } from '../pages/children/pharmacies/materials-accounting/materials-accounting.component';
 import { RemoteAccessComponent } from '../pages/children/pharmacies/remote-access/remote-access.component';
@@ -28,8 +29,8 @@ export const pharmaciesChildrenRoutes: Routes = [
     component: SectionDescriptionPharmaciesComponent,
   },
   {
-    path: 'view-price',
-    component: ViewPriceComponent,
+    path: 'view-price-pharmacies',
+    component: ViewPricePharmaciesComponent,
   },
   {
     path: 'materials-accounting',

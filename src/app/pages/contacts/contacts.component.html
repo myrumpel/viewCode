@@ -1,5 +1,6 @@
 <!--<app-h1></app-h1>-->
-<app-headline [grade]="1">{{ data.title }}</app-headline>
+<div [@fadeAnimation]>
+<app-headline [grade]="1" >{{ data.title }}</app-headline>
 <ul class="ulContacts">
   <li class="liContacts">
     <ul class="innerList">
@@ -45,3 +46,4 @@
     </ul>
   </li>
 </ul>
+</div>

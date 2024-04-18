@@ -1,4 +1,4 @@
-<div class="content">
+<div class="content" [@fadeAnimation]>
   <app-headline [grade]="2">{{ data.title }}</app-headline>
   <app-paragraph *ngFor="let item of data.content">{{ item }}</app-paragraph>
 </div>

@@ -24,6 +24,7 @@ import {
 import { MatAnchor } from '@angular/material/button';
 import { pharmaciesChildrenRoutes } from '../../data/children-routers';
 import { AutoOrderComponent } from '../children/pharmacies/auto-order/auto-order.component';
+import { ViewPricePharmaciesComponent } from '../children/pharmacies/view-price-pharmacies/view-price-pharmacies.component';
 import { ImportApplicationComponent } from '../children/pharmacies/import-application/import-application.component';
 import { IndividualReportsComponent } from '../children/pharmacies/individual-reports/individual-reports.component';
 import { InstallProgramMaterialsAccountingComponent } from '../children/pharmacies/install-program-materials-accounting/install-program-materials-accounting.component';
@@ -42,6 +43,7 @@ import { HeadlineComponent } from '../../components/ui/headlines/headline.compon
     PharmaciesComponent,
     AutoOrderComponent,
     ImportApplicationComponent,
+    ViewPricePharmaciesComponent,
     IndividualReportsComponent,
     InstallProgramMaterialsAccountingComponent,
     MaterialsAccountingComponent,

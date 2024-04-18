@@ -1,4 +1,4 @@
-<div class="content">
+<div class="content" [@fadeAnimation]>
   <app-headline [grade]="2">{{ data.title }}</app-headline>
   <app-headline [grade]="4">{{ data.content.title }}</app-headline>
 
@@ -18,7 +18,9 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
   </table>
-
+  <div class="p-4">
+  <app-paragraph  *ngFor="let item of data.content_1">{{ item }}</app-paragraph>
+  </div>
   <a
     class="download-link"
     href="{{ data.buttons.link }}"

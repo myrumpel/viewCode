@@ -4,11 +4,13 @@ import { EmailValidatorService } from '../../services/email-validator.service';
 import { ClearPhoneNumberService } from '../../services/clear-phone-number.service';
 import { HttpService } from '../../services/http.service';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
+import {fadeAnimation} from "../../animations/fade.adnimation";
 
 @Component({
   selector: 'app-feedback-form',
   templateUrl: './feedback-form.component.html',
   styleUrl: './feedback-form.component.scss',
+  animations: [fadeAnimation],
   changeDetection: ChangeDetectionStrategy['OnPush'],
 })
 export class FeedbackFormComponent {

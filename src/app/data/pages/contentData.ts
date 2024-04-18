@@ -25,6 +25,7 @@ import { installProgramMaterialsAccountingData } from '../../pages/children/phar
 import { materialsAccountingData } from '../../pages/children/pharmacies/materials-accounting/contentDataMaterialsAccounting';
 import { sectionDescriptionPharmaciesData } from '../../pages/children/pharmacies/section-description-pharmacies/contentDataSectionDescriptionPharmacies';
 import {agreementData} from "../../pages/agreement/contentDataAgreement";
+import {viewPricePharmaciesData} from "../../pages/children/pharmacies/view-price-pharmacies/view-price-pharmacies";
 
 export const contentDataRu = {
   homePage: homeData,
@@ -45,6 +46,7 @@ export const contentDataRu = {
     installProgramMaterialsAccounting: installProgramMaterialsAccountingData,
     materialsAccounting: materialsAccountingData,
     sectionDescription: sectionDescriptionPharmaciesData,
+    viewPricePharmacies: viewPricePharmaciesData
   },
   wholesalers: {
     description: sectionDescriptionData,

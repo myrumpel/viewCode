@@ -22,10 +22,12 @@ export const disclaimerFormatData = {
   },
   table: [
     {
+      name: 'ID_UNIQ',
       code: 'Уникальный ключ позиции в заявке',
-      description: '8',
+      description: '25',
     },
     {
+      name: 'KOL',
       code: 'Кол-во товара по данной позиции, которое ФАКТИЧЕСКИ БУДЕТ ДОСТАВЛЕНО клиенту',
       description: '6.0',
     },

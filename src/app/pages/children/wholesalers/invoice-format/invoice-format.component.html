@@ -1,22 +1,29 @@
-<div class="content">
+<div class="content" [@fadeAnimation]>
   <app-headline [grade]="2">{{ data.title }}</app-headline>
   <!--  <app-h4 class="mb-[20px]">{{ data.subtitle }}</app-h4>-->
   <app-headline [grade]="4">{{ data.subtitle }}</app-headline>
-
+  <app-paragraph *ngFor="let item of data.content">{{
+      item
+    }}</app-paragraph>
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z1">
     <ng-container matColumnDef="code">
-      <th mat-header-cell *matHeaderCellDef>Название колонки</th>
+      <th mat-header-cell *matHeaderCellDef>Описание</th>
       <td mat-cell *matCellDef="let element">{{ element.code }}</td>
     </ng-container>
 
     <ng-container matColumnDef="description">
-      <th mat-header-cell *matHeaderCellDef>Описание</th>
+      <th mat-header-cell *matHeaderCellDef>Кол-во символов</th>
       <td mat-cell *matCellDef="let element">{{ element.description }}</td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
   </table>
+  <div class="pt-7 text-sm">
+    <app-paragraph  *ngFor="let item of data.content_2">{{
+        item
+      }}</app-paragraph>
+  </div>
   <a
     class="download-link"
     href="{{ data.buttons.link }}"
