@@ -37,6 +37,7 @@ import { RemoteAccessComponent } from '../children/pharmacies/remote-access/remo
 import { RunningProgramWithKeysComponent } from '../children/pharmacies/running-program-with-keys/running-program-with-keys.component';
 import { SectionDescriptionPharmaciesComponent } from '../children/pharmacies/section-description-pharmacies/section-description-pharmacies.component';
 import { HeadlineComponent } from '../../components/ui/headlines/headline.component';
+import { ViewPriceComponent } from '../children/wholesalers/view-price/view-price.component';
 
 @NgModule({
   declarations: [

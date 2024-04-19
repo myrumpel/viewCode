@@ -16,7 +16,7 @@ export const menuLinks = [
     link: 'representatives',
   },
   {
-    text: 'Справочная служба по лекарствам',
+    text: 'Справочная служба',
     link: 'help',
   },
   {

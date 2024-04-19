@@ -1,6 +1,8 @@
 <!--<app-h1></app-h1>-->
 <div [@fadeAnimation]>
 <app-headline [grade]="1" >{{ data.title }}</app-headline>
+  <div class="contacts__wrapper">
+    <a routerLink="/feedback" class="contacts__button" mat-raised-button>  Связаться с нами <mat-icon >forward_to_inbox</mat-icon></a>
 <ul class="ulContacts">
   <li class="liContacts">
     <ul class="innerList">
@@ -45,5 +47,5 @@
       </li>
     </ul>
   </li>
-</ul>
+</ul></div>
 </div>

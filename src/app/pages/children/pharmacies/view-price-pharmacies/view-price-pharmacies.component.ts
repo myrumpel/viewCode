@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { contentDataRu } from '../../../../data/pages/contentData';
-import {fadeAnimation} from "../../../../../../../sklitFinish/src/app/animations/fade.animation";
+import {fadeAnimation} from "../../../../animations/fade.adnimation";
 
 @Component({
   selector: 'view-price-pharmacies',
