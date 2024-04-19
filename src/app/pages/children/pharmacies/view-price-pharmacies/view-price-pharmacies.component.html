@@ -1,0 +1,27 @@
+<div class="content" [@fadeAnimation]>
+  <app-headline [grade]="2">{{ data.title }}</app-headline>
+  <ul>
+    <li *ngFor="let item of data.content_1">{{ item }}</li>
+  </ul>
+  <ul>
+    <li *ngFor="let item of data.content">{{ item }}</li>
+  </ul>
+
+  <app-paragraph
+    >Будем рады ответить на все Ваши вопросы - пишите:
+    <a href="mailto:{{ data.email }}">{{ data.email }}</a
+    >.</app-paragraph
+  >
+  <app-paragraph
+    >Звоните по тел. в г. Краснодаре
+    <a href="tel:{{ data.phones.numberHref }}">{{ data.phones.numberView }}</a
+    >. Желаем Вам успешной работы!</app-paragraph
+  >
+  <a
+    class="download-link"
+    href="{{ data.button.link }}"
+    download="{{ data.button.fileText }}"
+    mat-flat-button
+    >{{ data.button.text }}</a
+  >
+</div>
