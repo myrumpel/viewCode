@@ -6,6 +6,7 @@ import { HttpService } from '../../services/http.service';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 import {fadeAnimation} from "../../animations/fade.adnimation";
 
+@UntilDestroy()
 @Component({
   selector: 'app-feedback-form',
   templateUrl: './feedback-form.component.html',
@@ -62,9 +63,9 @@ export class FeedbackFormComponent {
       const formDataToSend = { ...resultForm, phoneNumber };
       console.log(formDataToSend);
       this.http
-        .postData(JSON.stringify(formDataToSend), 'https://google.com')
+        .postData(formDataToSend, 'http://localhost:8080/api')
         .pipe(untilDestroyed(this))
         .subscribe();
-    }
-  }
+    }}
+
 }

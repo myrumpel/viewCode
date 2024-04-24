@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import { contentDataRu } from '../../data/pages/contentData';
 import {fadeAnimation} from "../../animations/fade.adnimation";
 

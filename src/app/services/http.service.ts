@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { FormControl } from '@angular/forms';
 
-interface data {
+interface IData {
   name: FormControl<string>;
   phoneNumber: FormControl<string>;
   email: FormControl<string>;
@@ -14,7 +14,8 @@ interface data {
 })
 export class HttpService {
   constructor(private http: HttpClient) {}
-  postData(data: string, url: string) {
-    return this.http.post<data>(url, data);
+  postData(data: any, url: string) {
+    console.log(url, data)
+    return this.http.post(url, data);
   }
 }
