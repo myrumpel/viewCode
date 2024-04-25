@@ -7,6 +7,7 @@ import { MatCheckbox } from '@angular/material/checkbox';
 import { RouterLink } from '@angular/router';
 import { MatButton } from '@angular/material/button';
 import { HeadlineComponent } from '../../components/ui/headlines/headline.component';
+import { MatProgressSpinner } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [FeedbackFormComponent],
@@ -18,6 +19,7 @@ import { HeadlineComponent } from '../../components/ui/headlines/headline.compon
     MatCheckbox,
     RouterLink,
     MatButton,
+    MatProgressSpinner,
   ],
 })
 export class FeedbackFormModule {}

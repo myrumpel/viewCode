@@ -1,10 +1,11 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { EmailValidatorService } from '../../services/email-validator.service';
 import { ClearPhoneNumberService } from '../../services/clear-phone-number.service';
 import { HttpService } from '../../services/http.service';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
-import {fadeAnimation} from "../../animations/fade.adnimation";
+import { fadeAnimation } from '../../animations/fade.adnimation';
+import { catchError, EMPTY, finalize, tap } from 'rxjs';
 
 @UntilDestroy()
 @Component({
@@ -15,11 +16,14 @@ import {fadeAnimation} from "../../animations/fade.adnimation";
   changeDetection: ChangeDetectionStrategy['OnPush'],
 })
 export class FeedbackFormComponent {
+  protected isLoading = false;
+  protected isSuccess = false;
   constructor(
     private emailValidator: EmailValidatorService,
     private clearPhoneNumber: ClearPhoneNumberService,
     private http: HttpService,
-    private builder: FormBuilder
+    private builder: FormBuilder,
+    private CDR: ChangeDetectorRef
   ) {}
 
   feedbackForm = this.builder.group({
@@ -61,11 +65,28 @@ export class FeedbackFormComponent {
       console.log(this.feedbackForm);
       phoneNumber = this.clearPhoneNumber.toClear(phoneNumber!);
       const formDataToSend = { ...resultForm, phoneNumber };
-      console.log(formDataToSend);
+      this.isLoading = true;
+
       this.http
         .postData(formDataToSend, 'http://localhost:8080/api')
-        .pipe(untilDestroyed(this))
-        .subscribe();
-    }}
+        .pipe(
+          tap((qwe) => {
+            this.isSuccess = true;
+            this.CDR.detectChanges();
+          }),
+          catchError((err) => {
+            console.log(err);
+            return EMPTY;
+          }),
+          finalize(() => {
+            console.log('qwe');
+            this.isLoading = false;
 
+            this.CDR.detectChanges();
+          }),
+          untilDestroyed(this)
+        )
+        .subscribe();
+    }
+  }
 }

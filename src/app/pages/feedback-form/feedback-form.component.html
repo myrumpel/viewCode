@@ -111,10 +111,21 @@
     <button
       class="submit"
       mat-raised-button
+      [ngClass]="{'successGreen': isSuccess}"
       (click)="onSubmit()"
-      [disabled]="feedbackForm.invalid || feedbackForm.get('agree')?.value === false"
+      [disabled]="feedbackForm.invalid || feedbackForm.get('agree')?.value === false || isLoading || isSuccess"
     >
-      Отправить
+      <div *ngIf="isLoading">
+        <mat-spinner class="spinner"></mat-spinner>
+      </div>
+      <div *ngIf="!isLoading">
+        @if (isSuccess){
+          Отправлено
+        }
+        @if (!isSuccess){
+          Отправить
+        }
+      </div>
     </button>
     <div class="warnWrapper">
       <ul class="warnMessageWrapper">

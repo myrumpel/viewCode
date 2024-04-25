@@ -59,6 +59,11 @@
 .submit {
   max-width: 120px;
   align-self: end;
+  min-width: 114px;
+
+}
+.successGreen {
+  background-color: rgba(100, 194, 77, 0.33);
 }
 .formLabel {
   transition: color .2s ease-in-out;
@@ -94,4 +99,8 @@
       background-color: #b9b9b9;
     }
   }
+}
+.spinner {
+  width: 15px!important;
+  height: 15px!important;
 }
