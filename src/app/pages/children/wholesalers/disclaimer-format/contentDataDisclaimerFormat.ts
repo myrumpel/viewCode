@@ -18,7 +18,7 @@ export const disclaimerFormatData = {
   buttons: {
     text: 'Скачать образец отказов',
     link: './assets/files/otkaz.DBF',
-    fileText: 'Образец отказов',
+    fileText: 'otkaz.dbf',
   },
   table: [
     {

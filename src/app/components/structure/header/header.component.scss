@@ -108,15 +108,31 @@ header {
   display: none;
 }
 .logo {
-  max-width: 40px;
-  margin-right: 16px;
+  max-width: 80px;
+  margin-right: 12px;
 }
 .logo-text {
   font-size: 20px;
   margin-top: 5px;
+  margin-right: 16px;
   font-weight: 500;
   color: whitesmoke;
-  letter-spacing: 0.3em;
+  //letter-spacing: 0.3em;
+  position: relative;
+  &:not(.desc-mobile)::after{
+    top: 0;
+    bottom: 0;
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    right: -8px;
+    background: rgba(whitesmoke,0.4);
+  }
+}
+.desc-mobile{
+  font-size: 16px;
+  font-weight: 400;
 }
 .mobileMenuList {
   li {
@@ -137,6 +153,14 @@ header {
   }
 }
 @media screen and (max-width: 900px) {
+   .desc-mobile {
+     display: none;
+   }
+  .logo-text{
+    &::after{
+      display: none;
+    }
+  }
   .header-wrapper {
     position: static;
   }

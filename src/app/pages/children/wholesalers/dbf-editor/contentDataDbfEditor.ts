@@ -6,6 +6,6 @@ export const dbfEditorData = {
   button: {
     text: 'Скачать программу для просмотра DBF файлов',
     link: './assets/files/DBFNavigator.rar',
-    fileText: 'Программа для просмотра DBF файлов',
+    fileText: 'DBFNavigator.rar',
   },
 };

@@ -15,7 +15,6 @@ interface IData {
 export class HttpService {
   constructor(private http: HttpClient) {}
   postData(data: any, url: string) {
-    console.log(url, data)
     return this.http.post(url, data, {observe: 'response'});
   }
 }

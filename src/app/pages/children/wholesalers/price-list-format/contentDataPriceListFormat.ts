@@ -29,7 +29,7 @@ export const priceListFormatData = {
   buttons: {
     text: 'Скачать образец прайс-листа',
     link: './assets/files/price.dbf',
-    fileText: 'Образец прайс-листа',
+    fileText: 'price.dbf',
   },
   table: [
     {

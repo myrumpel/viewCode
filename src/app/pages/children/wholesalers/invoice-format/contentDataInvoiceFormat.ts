@@ -21,7 +21,7 @@ export const invoiceFormatData = {
   buttons: {
     text: 'Скачать образец накладной',
     link: './assets/files/nakl.dbf',
-    fileText: 'Образец накладной',
+    fileText: 'nakl.dbf',
   },
   table: [
     {

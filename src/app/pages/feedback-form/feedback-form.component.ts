@@ -62,24 +62,21 @@ export class FeedbackFormComponent {
   onSubmit() {
     if (this.feedbackForm.valid) {
       let { agree, phoneNumber, ...resultForm } = this.feedbackForm.value;
-      console.log(this.feedbackForm);
       phoneNumber = this.clearPhoneNumber.toClear(phoneNumber!);
       const formDataToSend = { ...resultForm, phoneNumber };
       this.isLoading = true;
 
       this.http
-        .postData(formDataToSend, 'http://localhost:8080/api')
+        .postData(formDataToSend, window.location.origin+':8080/api')
         .pipe(
           tap((qwe) => {
             this.isSuccess = true;
             this.CDR.detectChanges();
           }),
           catchError((err) => {
-            console.log(err);
             return EMPTY;
           }),
           finalize(() => {
-            console.log('qwe');
             this.isLoading = false;
 
             this.CDR.detectChanges();
