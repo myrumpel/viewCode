@@ -8,7 +8,7 @@ export const contactsData = {
   },
   element_2: {
     title: 'Контакты регионов:',
-    cities: ['г. Краснодар:',  'Республика Крым:'],
+    cities: ['',  'Республика Крым:'],
     phoneNumbersView: [
       '+7 (861) 298-01-50',
       '+7 (918) 332-68-35',
@@ -16,7 +16,7 @@ export const contactsData = {
     phoneNumbersHref: ['+78612980150', '+79183326835'],
   },
   element_3: {
-    title: 'Телефон линии выходного дня:',
+    title: 'Телефон тех.поддержки в выходные дни:',
     schedule: 'с 08.00 по 19.00',
     phoneNumberView: '+7 (918) 332-68-35',
     phoneNumberHref: '+79282961152',
